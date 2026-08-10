@@ -72,16 +72,18 @@ if page == "Quick Project Summary":
     st.subheader("Quick Project Summary")
 
     st.write(
-        'This project is an AI-based brain tumor detection system designed to analyze MRI images using a trained YOLO11s model.'
-        'The system detects and classifies four categories:'
+        'This project is an AI-based brain tumor detection system developed to analyze brain MRI images'
+        ' using a trained YOLO11s model. The system takes an MRI image as input and detects the presence'
+        'and location of a possible tumor using bounding boxes. It can identify four categories:'  
  
         '\n1. Glioma'
         '\n2. Meningioma'
         '\n3. No Tumor'
         '\n4. Pituitary'
 
-     '\n\nThe trained model performs object detection by identifying'
-     ' the detected region in the MRI image and providing a confidence score for the prediction.'
+     '\n\nThe goal of the project is to provide a simple and user-friendly interface for experimenting'
+       'with AI-based medical image analysis. After uploading an MRI image, the model processes it'
+       'and displays the detection result along with the predicted class and confidence score.'
         )
     
     st.info(
@@ -153,8 +155,8 @@ if page == "🔍 Brain Tumor Detector":
        color: white;
        height: 2em;
        width: 100%;
-       border-radius: 10px;
-       font-size: 16px;
+       border-radius: 15px;
+       font-size: 23px;
      }
         div[data-testid="stAppViewContainer"] {
         background-color: #fafafa;
@@ -162,7 +164,7 @@ if page == "🔍 Brain Tumor Detector":
      </style>
       """, unsafe_allow_html=True)
 
-    if st.button("analyze"):
+    if st.button(" Analyze "):
         if uploaded_file is not None:
             
             image = Image.open(uploaded_file).convert("RGB") #opening & converting the image
@@ -188,10 +190,10 @@ if page == "🔍 Brain Tumor Detector":
                         diagnosis = model.names[class_id]  # taking the name of the id,
                                                            # which is the name of the tumor
 
-                # else:
+                else:
 
-                #     diagnosis = "No Detection"
-                #     confidence = 0
+                    diagnosis = "No Detection"
+                    confidence = 0
 
             st.subheader("MRI Result")
             # columns for images
