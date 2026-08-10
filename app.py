@@ -14,6 +14,29 @@ st.set_page_config(
     page_icon="🧠",
     layout="wide"
 )
+
+
+# dark blue title
+st.markdown("""
+<div style="
+    background-color: #123B7A;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+">
+
+<h1 style="color: white; margin: 0;">
+🧠Brain Tumor Detection
+</h1>
+
+<p style="color: white; font-size: 18px; margin-bottom: 0;">
+AI-powered MRI analysis using YOLO11s
+</p>
+
+</div>
+""", unsafe_allow_html=True)
+
+
 #backgroung color
 st.markdown(
     """
@@ -46,11 +69,6 @@ page = st.sidebar.radio(
 # this part is related to "Quick Project Summary"
 if page == "Quick Project Summary":
 
-    st.write('# Brain Tumor Detection')  
-    st.markdown(
-        '<div class="section-title"> AI-powered MRI analysis using YOLO11s</div>',
-        unsafe_allow_html=True
-    )
     st.subheader("Quick Project Summary")
 
     st.write(
@@ -98,11 +116,7 @@ if page == "Quick Project Summary":
 
 # this part is related to "🔍 Brain Tumor Detector"
 if page == "🔍 Brain Tumor Detector":
-    st.write('# Brain Tumor Detection') 
-    st.markdown(
-        '<div class="section-title"> AI-powered MRI analysis using YOLO11s</div>',
-        unsafe_allow_html=True
-    )
+
     st.subheader("Brain Tumor Detector")
     st.info(
         '* The dataset used was a brain MRI dataset with bounding box'
@@ -115,6 +129,22 @@ if page == "🔍 Brain Tumor Detector":
         " Upload MRI Image",
         type=["jpg", "jpeg", "png"]
     )
+
+    st.subheader("AI Analysis Pipeline")
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+            st.success("1.\n\n 📤 \n\n  → \n\n**Upload MRI** .")
+
+    with col2:
+            st.success("2.\n\n ⚙️ \n\n → \n\n**Preprocessing**.")
+
+    with col3:
+            st.success("3.\n\n 🧠\n\n → \n\n**YOLO11s**.")
+
+    with col4:
+                st.success("4.\n\n 📊\n\n → \n\n**Results**.")
+
+
     # prettier Analyze button
     st.markdown("""
       <style>
