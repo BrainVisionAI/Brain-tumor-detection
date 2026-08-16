@@ -40,6 +40,8 @@ st.set_page_config(
 
 
 st.markdown("""
+
+
 <style>
 
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -797,6 +799,318 @@ margin-right: 0 !important;
         transform: translateY(-2px);
         box-shadow: 0 8px 18px rgba(20, 40, 90, 0.28);
     }
+   
+    
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 900px) {
+
+    .main .block-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .top-header {
+        padding: 22px 24px;
+    }
+
+    .brand-name {
+        font-size: 24px;
+    }
+
+    .brand-subtitle {
+        font-size: 12px;
+    }
+
+    .brain-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .pipeline {
+        gap: 8px;
+    }
+
+    .pipeline-label {
+        font-size: 10px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    .main .block-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* HEADER */
+    .top-header {
+        padding: 18px !important;
+        border-radius: 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .brand-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .brand-left {
+        gap: 12px;
+    }
+
+    .brain-logo {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+    }
+
+    .brain-logo img {
+        width: 27px;
+        height: 27px;
+    }
+
+    .brand-name {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .brand-subtitle {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .header-badges {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .model-badge,
+    .ready-badge {
+        padding: 7px 12px;
+        font-size: 11px;
+    }
+
+
+    /* MAIN TITLE */
+    .main-title {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+
+    .main-description {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+    }
+
+
+    /* CARDS */
+    .card,
+    [data-testid="stColumn"]:has(.upload-card),
+    [data-testid="stColumn"]:has(.preview-title-block) {
+        padding: 16px !important;
+        border-radius: 14px !important;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
+
+    /* UPLOAD BOX */
+    [data-testid="stFileUploader"] {
+        height: 200px !important;
+    }
+
+    [data-testid="stFileUploaderDropzone"] {
+        height: 200px !important;
+        max-height: 200px !important;
+        padding: 20px 12px !important;
+    }
+
+    [data-testid="stFileUploaderDropzone"] label {
+        font-size: 13px !important;
+    }
+
+    [data-testid="stFileUploaderDropzone"] svg {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+
+    /* CLEAR X BUTTON
+       Remove the fixed desktop positioning */
+    [data-testid="stVerticalBlock"]:has([data-testid="stFileUploader"]):not(:has(.upload-card))
+    [data-testid="stButton"] {
+        top: 8px !important;
+        left: auto !important;
+        right: 8px !important;
+    }
+
+
+    /* MRI PREVIEW */
+    [data-testid="stColumn"]:has(.preview-title-block) [data-testid="stImage"] {
+        height: 200px !important;
+    }
+
+    [data-testid="stColumn"]:has(.preview-title-block)
+    [data-testid="stImage"] img,
+    [data-testid="stColumn"]:has(.preview-title-block)
+    [data-testid="stImageContainer"] img {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+
+    /* EMPTY PREVIEW */
+    .preview-empty {
+        height: 200px !important;
+        padding: 15px !important;
+    }
+
+    .preview-icon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .preview-icon img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .preview-title {
+        font-size: 14px;
+    }
+
+    .preview-text {
+        font-size: 11px;
+    }
+
+
+    /* PIPELINE */
+    .pipeline-card {
+        padding: 16px !important;
+        overflow-x: auto !important;
+    }
+
+    .pipeline {
+        min-width: 620px;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+
+    .pipeline-item {
+        min-width: 95px;
+    }
+
+    .pipeline-line {
+        min-width: 22px;
+    }
+
+
+    /* RESULTS */
+    .result-card {
+        padding: 16px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin-top: 24px;
+    }
+
+
+    /* DOWNLOAD */
+    .stDownloadButton button {
+        font-size: 13px !important;
+        padding: 11px !important;
+    }
+
+
+    /* REPOSITORY BUTTON */
+    .project-resources-title,
+    .developed-title {
+        font-size: 18px !important;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+
+    .main .block-container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .top-header {
+        padding: 15px !important;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .brand-subtitle {
+        font-size: 10px;
+    }
+
+    .main-title {
+        font-size: 24px !important;
+    }
+
+    .main-description {
+        font-size: 12px !important;
+    }
+
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+
+    [data-testid="stFileUploaderDropzone"] {
+        padding: 16px 8px !important;
+    }
+
+    .pipeline-item {
+        min-width: 85px;
+    }
+
+    .pipeline-label {
+        font-size: 9px;
+    }
+}
+
+
+
+
+
 
 </style>
 """, unsafe_allow_html=True)
