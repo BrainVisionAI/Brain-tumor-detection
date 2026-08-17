@@ -802,7 +802,7 @@ margin-right: 0 !important;
    
     
 /* =========================================================
-   RESPONSIVE DESIGN
+    RESPONSIVE DESIGN
    ========================================================= */
 
 /* ---------- TABLET ---------- */
@@ -970,22 +970,36 @@ margin-right: 0 !important;
 
 
     /* MRI PREVIEW */
-    [data-testid="stColumn"]:has(.preview-title-block) [data-testid="stImage"] {
-        height: 200px !important;
-    }
+[data-testid="stColumn"]:has(.preview-title-block)
+[data-testid="stImage"],
+[data-testid="stColumn"]:has(.preview-title-block)
+[data-testid="stImageContainer"] {
+    width: 100% !important;
+    height: 200px !important;
 
-    [data-testid="stColumn"]:has(.preview-title-block)
-    [data-testid="stImage"] img,
-    [data-testid="stColumn"]:has(.preview-title-block)
-    [data-testid="stImageContainer"] img {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-        width: auto !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+}
+
+[data-testid="stColumn"]:has(.preview-title-block)
+[data-testid="stImage"] img,
+[data-testid="stColumn"]:has(.preview-title-block)
+[data-testid="stImageContainer"] img {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    margin: 0 !important;
+
+    object-fit: contain !important;
+}
 
 
     /* EMPTY PREVIEW */
