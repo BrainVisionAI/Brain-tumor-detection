@@ -108,11 +108,10 @@ The system uses the **YOLO11s** object detection model to detect and localize br
 
 | Metric | Score |
 |---|---:|
-| Precision | 93.61% |
-| Recall | 90.86% |
-| mAP@0.50 | 95.72% |
-| mAP@0.50:0.95 | 75.69% |
-| Best F1 Score | 92.00% |
+| Precision | 95.05% |
+| Recall | 94.91% |
+| mAP@0.50 | 96.35% |
+| mAP@0.50:0.95 | 58.52% |
 
 
 ## Results & Visualizations
