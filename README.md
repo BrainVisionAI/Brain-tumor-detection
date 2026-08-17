@@ -151,16 +151,8 @@ The following figures summarize the training process and evaluation performance.
 
 
 ## Application Preview
-
+> 🎥 **Note:** Click on the preview GIF to view the complete application demo.
 <p align="center">
-  <img src="images/app-preview.gif" width="850">
+  <img src="./images/app-preview.gif" alt="BrainVision AI Application Preview" width="750">
 </p>
 
-
-## Developed By
-
-- **Shaghayegh Arzani**
-  - GitHub: https://github.com/Shaghayegha76
-
-- **Mahshid Helaleh**
-  - GitHub: https://github.com/Mahshid04
