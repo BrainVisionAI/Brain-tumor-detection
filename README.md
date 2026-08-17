@@ -150,3 +150,7 @@ The following figures summarize the training process and evaluation performance.
 The dataset used for training and evaluation was obtained from Roboflow Universe and contains labeled brain MRI images for brain tumor detection and localization.
 
 Dataset:  [(https://universe.roboflow.com/mango-qoesz/labeled-mri-brain-tumor-dataset-l8ayj/dataset/1)]
+
+## 👩‍💻 Authors
+
+**Shaghayegh Arzani & Mahshid Helaleh**
