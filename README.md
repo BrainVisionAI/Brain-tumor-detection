@@ -7,7 +7,7 @@ An AI-powered web application for detecting and localizing brain tumors in MRI s
 
 BrainVision AI provides an interactive Streamlit interface for MRI image upload, tumor detection and localization, confidence estimation, result visualization, and automatic PDF report generation.
 
-Live Application: [Open Web App](https://brainvisionai.streamlit.app/)
+Live Application: [(https://brainvisionai.streamlit.app/)](https://brainvisionai.streamlit.app/)
 
 ---
 
@@ -92,17 +92,6 @@ Brain-tumor-detection/
 
 The system uses the **YOLO11s** object detection model to detect and localize brain tumors in MRI images.
 
-### Training Configuration
-
-- **Model:** YOLO11s
-- **Epochs:** 100
-- **Batch Size:** 16
-- **Image Size:** 640 × 640
-- **Optimizer:** AdamW
-- **Learning Rate:** 0.001
-- **Weight Decay:** 0.0005
-- **Pretrained:** Yes
-
 
 ### Evaluation Results
 
@@ -155,3 +144,9 @@ The following figures summarize the training process and evaluation performance.
   <img src="./images/app-preview.gif" alt="BrainVision AI Application Preview" width="750">
 </p>
 
+## Data Source
+
+
+The dataset used for training and evaluation was obtained from Roboflow Universe and contains labeled brain MRI images for brain tumor detection and localization.
+
+Dataset:  [(https://universe.roboflow.com/mango-qoesz/labeled-mri-brain-tumor-dataset-l8ayj/dataset/1)]
