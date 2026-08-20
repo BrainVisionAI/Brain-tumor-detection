@@ -93,14 +93,14 @@ Brain-tumor-detection/
 The system uses the **YOLO11s** object detection model to detect and localize brain tumors in MRI images.
 
 
-### Evaluation Results
+### Model Performance on Test Set
 
 | Metric | Score |
 |---|---:|
-| Precision | 95.05% |
-| Recall | 94.91% |
-| mAP@0.50 | 96.35% |
-| mAP@0.50:0.95 | 58.52% |
+| Precision | 94.3% |
+| Recall | 93.9% |
+| mAP@0.50 | 96.0% |
+| mAP@0.50:0.95 | 61.4%|
 
 
 ## Results & Visualizations
